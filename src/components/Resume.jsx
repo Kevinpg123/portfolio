@@ -10,7 +10,7 @@ export default function Skills() {
       <h2 className={`page-header page-header-${theme}`}>Resume</h2>
       <div style={{ marginLeft: '1em' }} className="resume__container">
         <a
-          href="https://drive.google.com/file/d/1qbicQ0pmbzwyaL4vs3H4rxS8MlNvqs7E/view?usp=sharing"
+          href="https://drive.google.com/file/d/1pJLPM-mY_tj-0ypwroIWz_kZ0dith0mK/view?usp=sharing"
           className="resume__link"
           rel="noreferrer"
           target="_blank"
