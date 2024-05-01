@@ -1,4 +1,5 @@
-import resume from "../assets/images/resume.png";
+import resume from "../assets/images/cvnuevo1.png";
+import resume2 from "../assets/images/cvnuevo2.png"
 import { useTheme } from "./ThemeContext";
 
 export default function Skills() {
@@ -17,6 +18,11 @@ export default function Skills() {
           <img
             className={`resume__img${theme === "light" ? " light" : ""}`}
             src={resume}
+            title="Click to view PDF"
+          />
+          <img
+            className={`resume__img${theme === "light" ? " light" : ""}`}
+            src={resume2}
             title="Click to view PDF"
           />
         </a>
