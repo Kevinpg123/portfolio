@@ -8,27 +8,21 @@ export default function Skills() {
   return (
     <section id="resume" className="resume-section">
       <h2 className={`page-header page-header-${theme}`}>Resume</h2>
-      <div className="resume__container">
-        {/* <a
-          href="https://res.cloudinary.com/ddx1ikpma/image/upload/v1703889203/resume_xwxwn7.png"
+      <div style={{ marginLeft: '1em' }} className="resume__container">
+        <a
+          href="https://drive.google.com/file/d/1qbicQ0pmbzwyaL4vs3H4rxS8MlNvqs7E/view?usp=sharing"
           className="resume__link"
           rel="noreferrer"
           target="_blank"
-        > */}
-        <img
-          style={{ marginLeft: '1em' }}
-          className={`resume__img${theme === "light" ? " light" : ""}`}
-          src={resume}
-          title="Click to view PDF"
-        />
-        <img
-          style={{ marginLeft: '1em' }}
+        >
+          <img
 
-          className={`resume__img${theme === "light" ? " light" : ""}`}
-          src={resume2}
-          title="Click to view PDF"
-        />
-        {/* </a> */}
+            className={`resume__img${theme === "light" ? " light" : ""}`}
+            src={resume}
+            title="Click to view PDF"
+          />
+
+        </a>
       </div>
     </section>
   );
