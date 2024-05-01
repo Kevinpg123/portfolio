@@ -21,6 +21,22 @@ const projects = [
       "SiDotenv",
     ],
   },
+  {
+    key: 2,
+    title: "Dog's App",
+    description:
+    "Aplication where you can see many dog's breed, order them by weight and filter them by temperament. Also you can create new dog's breed",
+    image:
+      "https://res.cloudinary.com/dbuua54ib/image/upload/v1714577173/homeDogApp.png",
+    live: "https://deploy-app-dog.vercel.app/",
+    github: "https://github.com/Kevinpg123/deployAppDog",
+    builtWith: [
+      "SiJavascript",
+      "SiSequelize",
+      "SiDotenv",
+      "SiReact"
+    ],
+  },
   
   
 ];
