@@ -23,7 +23,26 @@ export default function Skills() {
           />
 
         </a>
+
+        <p>Read More: </p>
+        <a
+          href="https://drive.google.com/file/d/1pJLPM-mY_tj-0ypwroIWz_kZ0dith0mK/view?usp=sharing"
+          className="resume__link"
+          rel="noreferrer"
+          target="_blank"
+        ><img src="https://firebasestorage.googleapis.com/v0/b/portfolio-aeb2a.appspot.com/o/bandera%20inglesa.png?alt=media&token=cfee7fff-dfff-4c81-b42d-a54860ae2144"></img>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1R8PMVDJEtnvXbx88-nGk0YSuwzlVv8zW/view?usp=sharing"
+          className="resume__link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-aeb2a.appspot.com/o/Bandera_de_Espa%C3%B1a_(sin_escudo).svg.png?alt=media&token=12ea8528-5f95-4890-9142-e39509639395"></img>
+        </a>
       </div>
+
+
     </section>
   );
 }
