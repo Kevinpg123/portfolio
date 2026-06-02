@@ -1,29 +1,36 @@
 import img from "../assets/images/profilePhoto.png";
 import { useTheme } from "./ThemeContext";
-import style from './About.module.css'
+import style from "./About.module.css";
 
 export default function About() {
   const { theme } = useTheme();
 
   return (
-    <section className="about">
+    <section id="about" className="about">
       <h2 className={`page-header page-header-${theme}`}>About Me</h2>
-      <div>
+      <div className="about__content">
         <div className="bio-img">
-          <img className={style.img} src={img} />
+          <img className={style.img} src={img} alt="Kevin Pauluk" />
         </div>
         <div className="bio-desc">
           <p>
-            Hello, I'm an enthusiastic full stack developer originally from Argentina, driven by a deep commitment to creating innovative solutions that leave a lasting impact. With a strong foundation in both front-end and back-end technologies, I bring a versatile skill set to the table.
+            Fullstack developer with 1+ year of real production experience, based in Posadas,
+            Argentina. I designed, built and deployed — solo — a complete government web system
+            for the Ministerio de Ecología de Misiones: REST API with 70+ endpoints, Docker
+            Compose architecture with 4 services, JWT authentication, and server-side PDF
+            generation with concurrency control.
           </p>
-
           <p>
-            My development journey is fueled by a passion for clean, efficient code and a keen eye for detail. I take pride in turning intricate concepts into seamless user experiences, ensuring that every line of code contributes to a polished end product. My approach is not just about writing code; it's about architecting robust and scalable solutions that stand the test of time.
+            Passionate about clean, efficient code and solutions that actually work in production.
+            Strong hands-on experience with React, Node.js, PostgreSQL and Docker.
+            Looking for remote opportunities where I can keep building impactful things.
           </p>
-
-          <p>
-            Collaboration is at the heart of my work philosophy. I thrive in dynamic environments where creativity and teamwork converge. Let's embark on a journey to build something extraordinary together. Whether it's tackling complex challenges or bringing innovative ideas to life, I'm ready to contribute my skills and expertise to make a meaningful impact. Let's create a digital experience that goes beyond expectations and resonates with users. Welcome to my portfolio, where passion meets proficiency, and every project is an opportunity for excellence."
-          </p>
+          <div className="about__badges">
+            <span className="badge">🌍 English C2 Proficient</span>
+            <span className="badge">📍 Posadas, Argentina</span>
+            <span className="badge">🌐 Open to Remote</span>
+            <span className="badge">🇩🇪 German A1</span>
+          </div>
         </div>
       </div>
     </section>

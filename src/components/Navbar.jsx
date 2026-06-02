@@ -97,6 +97,28 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link
                   className={`nav-link${theme === "light" ? " light" : ""}`}
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Skills
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link${theme === "light" ? " light" : ""}`}
+                  to="experience"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Experience
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link${theme === "light" ? " light" : ""}`}
                   to="projects"
                   spy={true}
                   smooth={true}
@@ -114,17 +136,6 @@ export default function Navbar() {
                   duration={500}
                 >
                   Resume
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className={`nav-link${theme === "light" ? " light" : ""}`}
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  Contact
                 </Link>
               </li>
             </div>
