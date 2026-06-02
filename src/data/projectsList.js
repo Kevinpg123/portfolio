@@ -60,20 +60,6 @@ const projects = [
       "SiFirebase",
     ],
   },
-  {
-    key: 4,
-    title: "Dog Breeds App",
-    subtitle: "Henry Bootcamp · Solo Project",
-    description:
-      "App to browse dog breeds, filter by temperament, sort by weight, and create new breeds. Connects to an external API and a custom Express backend.",
-    featured: false,
-    noImage: false,
-    image:
-      "https://res.cloudinary.com/dbuua54ib/image/upload/v1714577173/homeDogApp.png",
-    live: "https://deploy-app-dog.vercel.app/",
-    github: "https://github.com/Kevinpg123/deployAppDog",
-    builtWith: ["SiJavascript", "SiSequelize", "SiReact"],
-  },
 ];
 
 export default projects;
