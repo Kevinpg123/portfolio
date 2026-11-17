@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kevin Pauluk</title>
+    <title>Kevin Pauluk · Desarrollador Fullstack · Geoespacial</title>
+    <meta
+      name="description"
+      content="Desarrollador Fullstack con experiencia en sistemas web gubernamentales en producción y procesamiento de datos geoespaciales. React, Node.js, PostgreSQL, Docker y QGIS."
+    />
+    <meta name="author" content="Kevin Osmar Pauluk" />
+    <meta name="theme-color" content="#0b1210" />
+    <link rel="canonical" href="https://portfoliokevin.vercel.app/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfoliokevin.vercel.app/" />
+    <meta property="og:title" content="Kevin Pauluk · Fullstack Developer · Geospatial" />
+    <meta
+      property="og:description"
+      content="Fullstack developer building production web systems for environmental management with React, Node.js and geospatial data."
+    />
+    <meta property="og:image" content="https://portfoliokevin.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Aplica tema guardado antes de pintar, para evitar parpadeo -->
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
+    <noscript>Kevin Pauluk — Fullstack Developer · Geospatial. osmarkevinp@gmail.com</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

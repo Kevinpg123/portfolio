@@ -1,38 +1,22 @@
-import { useState, useEffect } from "react";
-import { useTheme } from "./ThemeContext";
+import { useEffect, useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
-import "../assets/styles/style.css";
+import { useLanguage } from "./LanguageContext";
 
 export default function ScrollToTop() {
-  const [showTopBtn, setShowTopBtn] = useState(false);
-  const { theme } = useTheme();
+  const [show, setShow] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
+    const onScroll = () => setShow(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
+  if (!show) return null;
+
   return (
-    <div className="top-to-btm">
-      {" "}
-      {showTopBtn && (
-        <FaAngleUp
-          className={`icon-position icon-style${
-            theme === "light" ? " light" : ""
-          }`}
-          onClick={goToTop}
-        />
-      )}{" "}
-    </div>
+    <a href="#home" className="to-top" aria-label={t.footer.top} title={t.footer.top}>
+      <FaAngleUp aria-hidden="true" />
+    </a>
   );
 }
