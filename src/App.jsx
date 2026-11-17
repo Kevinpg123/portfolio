@@ -1,28 +1,33 @@
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import Resume from "./components/Resume";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
+import ContactLinks from "./components/ContactLinks";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeContext";
+import { LanguageProvider } from "./components/LanguageContext";
 
 function App() {
   return (
     <ThemeProvider>
-      <Navbar />
-      <main className="main">
-        <Landing />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Resume />
+      <LanguageProvider>
+        <Navbar />
+        <main id="main" className="main">
+          <Landing />
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Education />
+          <ContactLinks />
+        </main>
         <ScrollToTop />
-      </main>
-      <Footer />
+        <Footer />
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

@@ -1,40 +1,27 @@
-import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
-import { GoMail } from "react-icons/go";
-import { useTheme } from "./ThemeContext";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { useLanguage } from "./LanguageContext";
+import { profile } from "../data/profile";
 
 export default function Footer() {
-  const { theme } = useTheme();
+  const { t } = useLanguage();
+
   return (
-    <footer className={`footer${theme === "light" ? " light" : ""}`}>
-      <a
-        href="https://www.linkedin.com/in/kevin-osmar-pauluk-373676261/"
-        className={`footer__link${theme === "light" ? " light" : ""}`}
-        rel="noreferrer"
-        target="_blank"
-        title="LinkedIn"
-      >
-        <FaLinkedin />
-      </a>
-      <a
-        href="https://github.com/Kevinpg123"
-        className={`footer__link${theme === "light" ? " light" : ""}`}
-        rel="noreferrer"
-        target="_blank"
-        title="GitHub"
-      >
-        <FaGithub />
-      </a>
-      <a
-        href="mailto:osmarkevinp@gmail.com"
-        className={`footer__link${theme === "light" ? " light" : ""}`}
-        title="Email"
-      >
-        <GoMail />
-      </a>
-      <FaReact
-        className={`react-logo${theme === "light" ? " light" : ""}`}
-        title="Built with React"
-      />
+    <footer className="footer">
+      <div className="footer__links">
+        <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <FaLinkedin aria-hidden="true" />
+        </a>
+        <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+          <FaGithub aria-hidden="true" />
+        </a>
+        <a href={`mailto:${profile.email}`} aria-label="Email">
+          <FiMail aria-hidden="true" />
+        </a>
+      </div>
+      <p>
+        © {new Date().getFullYear()} {profile.name} · {t.footer.rights}
+      </p>
     </footer>
   );
 }
